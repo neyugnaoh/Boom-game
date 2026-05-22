@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Login : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Login : MonoBehaviour
     public GameObject wrongLoginPopup;
     public void loginClicked()
     {
-        if (usernameField.GetComponent<InputField>().text == "admin" && passwordField.GetComponent<InputField>().text == "admin")
+        if (usernameField.GetComponent<TMP_InputField>().text == "admin" && passwordField.GetComponent<TMP_InputField>().text == "admin")
         {
             SceneManager.LoadScene(3);
         }

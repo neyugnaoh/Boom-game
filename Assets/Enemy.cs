@@ -121,8 +121,8 @@ public class Enemy : MonoBehaviour
         }
 
         // Animation of enemy
-        movement.x = rb.velocity.x;
-        movement.y = rb.velocity.y;
+        movement.x = rb.linearVelocity.x;
+        movement.y = rb.linearVelocity.y;
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -131,7 +131,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 8){
             Destroy(gameObject);
-            FindObjectOfType<TileAutomate>().KillZombie();
+            FindFirstObjectByType<TileAutomate>().KillZombie();
         }
     }
     void UpdateGraph(){

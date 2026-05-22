@@ -32,7 +32,7 @@ public class BombPlanting : MonoBehaviour
         bombPosition.x = Mathf.Round(bombPosition.x); 
         bombPosition.y = Mathf.Round(bombPosition.y); 
         bombPosition.z = Mathf.Round(bombPosition.z);
-        Collider2D[] c = Physics2D.OverlapCircleAll(bombPosition,0.1f,bombMask,0f,0f);
+        Collider2D[] c = Physics2D.OverlapCircleAll(bombPosition,0.1f,bombMask);
         for(int i=0; i < c.Length;i++)
         {
             if (c[i].gameObject.tag == "Bomb")

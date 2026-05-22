@@ -39,8 +39,8 @@ public class Bomb : MonoBehaviour
         Destroy(other.gameObject);
     }
     void Explode(bool isTriggerByAnotherBomb){
-        FindObjectOfType<BombPlanting>().isExploded();
-        FindObjectOfType<MapDestroyer>().Explode(transform.position,isTriggerByAnotherBomb, bombLength);
+        FindFirstObjectByType<BombPlanting>().isExploded();
+        FindFirstObjectByType<MapDestroyer>().Explode(transform.position,isTriggerByAnotherBomb, bombLength);
         Destroy(gameObject); 
     }
     void setLength(int length){
