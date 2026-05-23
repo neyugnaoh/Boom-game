@@ -5,8 +5,10 @@ public class WebGLBuilder
 {
     public static void Build()
     {
+        PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Disabled;
+
         string[] scenes = GetScenes();
-        string buildPath = "Build/WebGL";
+        string buildPath = "build/WebGL";
 
         BuildPlayerOptions options = new BuildPlayerOptions
         {
