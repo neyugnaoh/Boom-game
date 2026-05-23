@@ -38,7 +38,6 @@ jobs:
         with:
           targetPlatform: WebGL
           unityVersion: 6000.4.7f1
-          buildMethod: WebGLBuilder.Build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
