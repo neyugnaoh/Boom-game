@@ -49,19 +49,19 @@ public class GamePlay : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+    public void Retry()
+    {
+        Player.currentHealth = 100;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(4);
+    }
+
     public void LoadMenu()
     {
         Player.currentHealth = 100;
         pauseMenuPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         Time.timeScale = 1f;
-        if (MainMenu.freetrialStatus)
-        {
-            SceneManager.LoadScene(0);
-        } else
-        {
-            SceneManager.LoadScene(3);
-        }
-        
+        SceneManager.LoadScene(0);
     }
 }

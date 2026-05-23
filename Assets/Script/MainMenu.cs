@@ -6,19 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private bool optionPanelStatus = false;
-    public static bool freetrialStatus;
     public GameObject optionPanel;
     public GameObject mainMenuPanel;
 
-    public void loginClicked()
+    public void startClicked()
     {
-        freetrialStatus = false;
-        SceneManager.LoadScene(1);
-    }
-
-    public void freetrialClicked()
-    {
-        freetrialStatus = true;
         SceneManager.LoadScene(4);
     }
 
