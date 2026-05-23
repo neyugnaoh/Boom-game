@@ -131,7 +131,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == 8){
             Destroy(gameObject);
-            FindFirstObjectByType<TileAutomate>().KillZombie();
+            FindAnyObjectByType<TileAutomate>().KillZombie();
         }
     }
     void UpdateGraph(){
